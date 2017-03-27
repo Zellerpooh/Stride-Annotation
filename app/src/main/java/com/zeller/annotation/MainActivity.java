@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.zeller.annotation.viewinject.ContentView;
 import com.zeller.annotation.viewinject.InjectUtils;
+import com.zeller.annotation.viewinject.OnClick;
 import com.zeller.annotation.viewinject.ViewInject;
 
 @ContentView(value = R.layout.activity_main)
@@ -22,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         InjectUtils.inject(this);
-        btn_change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv_change.setText("change");
-            }
-        });
+
+    }
+
+    @OnClick({R.id.btn_change,R.id.tv_change})
+    public void dooo(View v) {
+        tv_change.setText("change");
     }
 }

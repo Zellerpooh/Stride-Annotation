@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_change,R.id.tv_change})
+    @OnClick({R.id.btn_change, R.id.tv_change})
     public void dooo(View v) {
         tv_change.setText("change");
     }

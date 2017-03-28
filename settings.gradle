@@ -1,1 +1,1 @@
-include ':app', ':libclass', ':beanlib'
+include ':app', ':libclass', ':beanlib', ':aptann', ':aptprocessor'
